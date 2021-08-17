@@ -1,0 +1,22 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./cypress/tsconfig.json"
+  },
+  "plugins": ["cypress"],
+  "extends": ["airbnb", "prettier", "next", "next/core-web-vitals"],
+  "rules": {
+    "import/namespace": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["./**/*.ts"]
+      }
+    ],
+    "@typescript-eslint/no-unused-expressions": "off",
+    "no-void": "off"
+  },
+  "env": {
+    "cypress/globals": true
+  }
+}
