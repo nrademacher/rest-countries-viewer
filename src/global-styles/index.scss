@@ -1,11 +1,32 @@
-@import 'open-color/open-color';
+@import '@fontsource/nunito-sans';
+
+:root {
+  --text: hsl(200, 15%, 8%);
+  --input: hsl(0, 0%, 52%);
+  --background: hsl(0, 0%, 98%);
+  --elements: hsl(0, 0%, 100%);
+}
+
+[data-theme='dark'] {
+  --text: hsl(0, 0%, 100%);
+  --input: hsl(0, 0%, 52%);
+  --background: hsl(207, 26%, 17%);
+  --elements: hsl(209, 23%, 22%);
+}
+
+* {
+  box-sizing: border-box;
+}
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
 }
 
 a {
@@ -13,6 +34,7 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+input {
+  color: var(--input);
+  background-color: var(--background);
 }

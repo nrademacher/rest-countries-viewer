@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  padding: 0 2em;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 800;
+  background-color: var(--elements);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
