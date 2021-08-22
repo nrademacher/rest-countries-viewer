@@ -4,13 +4,14 @@
   justify-content: space-between;
 
   &-icon {
-    height: 25px;
-    width: 25px;
+    height: 1.25em;
+    width: 1.25em;
     margin-right: 0.25em;
     cursor: pointer;
   }
 
   &-text {
+    font-size: calc(0.5rem + 0.5vw);
     font-weight: 600;
   }
 }

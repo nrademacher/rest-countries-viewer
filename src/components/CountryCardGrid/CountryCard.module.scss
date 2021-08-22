@@ -1,0 +1,40 @@
+.card {
+  background-color: var(--elements);
+  box-shadow: var(--elements-shadow);
+  border-radius: 0.5em;
+
+  .card-image-container {
+    .card-image {
+      border-top-left-radius: 0.5em;
+      border-top-right-radius: 0.5em;
+      height: 10em;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .card-text-container {
+    padding: 0.25em 1.5em 2em;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+
+    .card-title {
+      margin-bottom: 1.25em;
+    }
+
+    .card-items {
+      line-height: 0;
+    }
+
+    .card-item {
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+
+      h3 {
+        margin-right: 0.25em;
+      }
+    }
+  }
+}

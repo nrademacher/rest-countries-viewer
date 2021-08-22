@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Header } from '../components';
+import { Header, CountryCardGrid } from '../components';
 
 export default function Home({ countries }) {
   return (
@@ -9,9 +9,7 @@ export default function Home({ countries }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      {countries.map((country) => (
-        <div key={country.name}>{country.name}</div>
-      ))}
+      <CountryCardGrid countries={countries} />
     </>
   );
 }

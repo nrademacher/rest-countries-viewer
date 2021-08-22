@@ -26,17 +26,17 @@ export const ModeToggle = () => {
   }
 
   return (
-    <span className={styles[`theme-switch`]}>
+    <span className={styles.themeSwitch}>
       <span
         tabIndex={0}
         role="button"
-        className={styles[`theme-switch-icon`]}
+        className={styles.themeSwitchIcon}
         onClick={toggleTheme}
         onKeyUp={(e) => toggleThemeByKey(e)}
       >
         {theme === `light` ? <MoonIcon /> : <SunIcon />}
       </span>
-      <span className={styles[`theme-switch-text`]}>
+      <span className={styles.themeSwitchText}>
         {theme === `light` ? `Dark ` : `Light `}Mode
       </span>
     </span>
