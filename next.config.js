@@ -12,7 +12,6 @@ module.exports = {
           typeof moduleLoader.options.modules === 'object'
         ) {
           moduleLoader.options = {
-            // eslint-disable-line no-param-reassign
             ...moduleLoader.options,
             modules: {
               ...moduleLoader.options.modules,

@@ -31,12 +31,12 @@
     "build:sb": "build-storybook"
   },
   "lint-staged": {
-    "./src/**/*.{ts,js,jsx,tsx}": [
+    "src/**/*.{ts,js,jsx,tsx}": [
       "pnpm lint --fix",
       "pnpm format",
       "pnpm test:unit"
     ],
-    "./src/**/*.{css, scss}": [
+    "src/**/*.{css, scss}": [
       "stylelint --fix",
       "pnpm format:style"
     ]
@@ -44,7 +44,6 @@
   "dependencies": {
     "@fontsource/nunito-sans": "4.5.0",
     "next": "latest",
-    "open-color": "1.8.0",
     "react": "latest",
     "react-dom": "latest",
     "sass": "1.37.5"
