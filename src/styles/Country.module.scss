@@ -1,7 +1,14 @@
 .details-page {
-  margin: 4em;
+  margin: 2em;
+
+  @media (min-width: 768px) {
+    margin: 4em;
+  }
 
   .back-button {
+    cursor: pointer;
+    font-size: 1em;
+    padding: 0.5em 2em;
     border: initial;
     background-color: var(--elements);
     box-shadow: var(--elements-shadow);
@@ -15,11 +22,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
     width: 100%;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
   }
 
   .details-flag {
-    width: 40%;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      width: 40%;
+    }
 
     img {
       width: 100%;
@@ -27,7 +43,11 @@
   }
 
   .details-text {
-    width: 50%;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      width: 50%;
+    }
 
     .title {
       font-size: 2rem;
@@ -36,13 +56,28 @@
 
   .detail-items {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     width: 75%;
     margin-bottom: 2em;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
   }
 
   .items-column {
     line-height: 0;
+
+    &:first-child {
+      margin-bottom: 2em;
+    }
+
+    @media (min-width: 768px) {
+      &:first-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .item,
