@@ -1,0 +1,26 @@
+.search {
+  width: 100%;
+  margin-bottom: 10px;
+
+  .icon {
+    position: absolute;
+    margin-top: 1em;
+    margin-left: 1.5em;
+    max-width: 22.5px;
+    opacity: 0.75;
+  }
+
+  .input {
+    border: initial;
+    border-radius: 0.5em;
+    box-shadow: var(--elements-shadow);
+    width: 100%;
+    padding: 1.5em;
+    padding-left: 5em;
+    background-color: var(--elements);
+
+    @media (min-width: 768px) {
+      width: 35%;
+    }
+  }
+}
