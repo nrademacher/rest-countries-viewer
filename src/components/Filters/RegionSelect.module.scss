@@ -1,0 +1,18 @@
+.dropdown {
+  border: initial;
+  border-radius: 0.5em;
+  background-color: var(--elements);
+  box-shadow: var(--elements-shadow);
+  width: 100%;
+  padding: 1.5em;
+  appearance: none;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png)
+    no-repeat right var(--elements);
+  background-size: 5%;
+  background-position-x: calc(100% - 1.5em);
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    width: 20%;
+  }
+}

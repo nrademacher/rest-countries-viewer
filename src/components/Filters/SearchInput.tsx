@@ -17,7 +17,7 @@ export const SearchInput = ({
     if (query === ``) {
       setCountries(originalCountries.current);
     }
-  }, [query]);
+  }, [query, setCountries]);
 
   const fzf = new Fzf(originalCountries.current, {
     selector: (item: any) => item.name,
@@ -59,6 +59,7 @@ export const SearchInput = ({
         type="text"
         value={query}
         onChange={handleChange}
+        placeholder="Search for a country..."
       />
     </section>
   );

@@ -1,4 +1,7 @@
 .filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   margin: 2em;
 
   @media (min-width: 768px) {

@@ -4,7 +4,7 @@ import styles from './CountryCardGrid.module.scss';
 
 export const CountryCardGrid = ({ countries }) => (
   <section className={styles.grid}>
-    {countries &&
+    {countries.length &&
       countries.map((country) => (
         <CountryCard
           id={country.alpha3Code}
