@@ -1,7 +1,10 @@
 import Head from 'next/head';
-import { Header, CountryCardGrid } from '../components';
+import { useState } from 'react';
+import { Header, CountryCardGrid, Filters } from '../components';
 
 export default function Home({ countries }) {
+  const [countryList, setCountryList] = useState(countries);
+
   return (
     <>
       <Head>
@@ -9,7 +12,11 @@ export default function Home({ countries }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <CountryCardGrid countries={countries} />
+      <Filters
+        countries={countryList}
+        setCountries={(c) => setCountryList(c)}
+      />
+      <CountryCardGrid countries={countryList} />
     </>
   );
 }

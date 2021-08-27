@@ -36,6 +36,7 @@ specifiers:
   eslint-plugin-prettier: 3.4.0
   eslint-plugin-react: 7.24.0
   eslint-plugin-react-hooks: 4.2.0
+  fzf: 0.4.1
   husky: 7.0.1
   identity-obj-proxy: 3.0.0
   jest: 27.0.6
@@ -59,6 +60,7 @@ specifiers:
 
 dependencies:
   '@fontsource/nunito-sans': 4.5.0
+  fzf: 0.4.1
   next: 11.1.0_485b2e671c52daea3151d0ae96928a54
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -8627,6 +8629,10 @@ packages:
     resolution: {integrity: sha512-hT9yh/tiinkmirKrlv4KWOjztdoZo1mx9Qh4KvWqC7isoXwdUY3PNWUxceF4/qO9R6riA2C29jdTOeQOIROjgw==}
     engines: {node: '>=6'}
     dev: true
+
+  /fzf/0.4.1:
+    resolution: {integrity: sha512-ZKnxeZqxkJlnHXE37yfqyGez45Wan99eqns5B9xzVTvF4MazXlLsOYWeyiofdCEexgzuOmYGs3g7gtlz9lGxiQ==}
+    dev: false
 
   /gauge/2.7.4:
     resolution: {integrity: sha1-LANAXHU4w51+s3sxcCLjJfsBi/c=}
