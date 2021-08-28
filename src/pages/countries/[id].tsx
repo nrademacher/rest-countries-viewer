@@ -2,10 +2,10 @@ import type { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
 import NumberFormat from 'react-number-format';
 import { Header } from '../../components';
-import { Country } from '@/types/countries';
+import { Country as CountryType } from '@/types/countries';
 import styles from '../../styles/Country.module.scss';
 
-export default function Country({ country }: { country: Country }) {
+export default function Country({ country }: { country: CountryType }) {
   return (
     <>
       <Header />
@@ -82,7 +82,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const raw = await fetch(`https://restcountries.eu/rest/v2/all`);
   const countries = await raw.json();
 
-  const paths = countries.map((country: Country) => ({
+  const paths = countries.map((country: CountryType) => ({
     params: { id: country.alpha3Code },
   }));
 
