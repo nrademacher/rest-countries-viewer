@@ -51,15 +51,19 @@ export default function Country({ country }: { country: CountryType }) {
               <section className={styles.itemsColumn}>
                 <div className={styles.item}>
                   <h3>Top Level Domain:</h3>
-                  <span>{` ${country.topLevelDomain[0]}`}</span>
+                  <span>{country.topLevelDomain.join(`, `)}</span>
                 </div>
                 <div className={styles.item}>
                   <h3>Currencies:</h3>
-                  <span>{` ${country.currencies[0].name}`}</span>
+                  <span>
+                    {country.currencies.map((curr) => curr.name).join(`, `)}
+                  </span>
                 </div>
                 <div className={styles.item}>
                   <h3>Languages:</h3>
-                  <span>{` ${country.languages[0].name}`}</span>
+                  <span>
+                    {country.languages.map((lang) => lang.name).join(`, `)}
+                  </span>
                 </div>
               </section>
             </article>
