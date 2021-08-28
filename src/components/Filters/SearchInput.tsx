@@ -1,30 +1,36 @@
 import { useState, useEffect, useRef } from 'react';
 import { Fzf } from 'fzf';
+import { Countries, Country } from '@/types/countries';
 import styles from './SearchInput.module.scss';
+
+type FzfCountryResult = {
+  end: number;
+  item: Country;
+  positions: Set<number>;
+  score: number;
+  start: number;
+};
 
 export const SearchInput = ({
   countries,
   setCountries,
 }: {
-  countries: any;
-  setCountries: any;
+  countries: Countries;
+  setCountries: React.Dispatch<React.SetStateAction<Countries>>;
 }) => {
   const originalCountries = useRef(countries);
   const [query, setQuery] = useState(``);
-  const [results, setResults] = useState<null | typeof countries>(null);
+  const [results, setResults] = useState<null | FzfCountryResult[]>(null);
+
+  const fzf = new Fzf(originalCountries.current, {
+    selector: (item) => item.name,
+  });
 
   useEffect(() => {
     if (query === ``) {
       setCountries(originalCountries.current);
     }
-  }, [query, setCountries]);
 
-  const fzf = new Fzf(originalCountries.current, {
-    selector: (item: any) => item.name,
-  });
-
-  const handleChange = (e: any) => {
-    setQuery(e.target.value);
     const exactMatch = originalCountries.current.find(
       (country) => country.name.toLowerCase() === query.toLowerCase(),
     );
@@ -34,8 +40,14 @@ export const SearchInput = ({
     } else {
       setResults(fzf.find(query));
       if (!results) return;
-      setCountries(results.map((result) => result.item));
+
+      const fzfResult = results.map((result) => result.item);
+      setCountries(fzfResult);
     }
+  }, [query]);
+
+  const handleChange = (e: React.BaseSyntheticEvent) => {
+    setQuery(e.target.value);
   };
 
   return (

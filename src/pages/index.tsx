@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import { Header, CountryCardGrid, Filters } from '../components';
+import { Countries } from '../types/countries';
 
-export default function Home({ countries }) {
+export default function Home({ countries }: { countries: Countries }) {
   const [countryList, setCountryList] = useState(countries);
 
   return (

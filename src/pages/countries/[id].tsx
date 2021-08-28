@@ -1,9 +1,11 @@
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
+import NumberFormat from 'react-number-format';
 import { Header } from '../../components';
+import { Country } from '@/types/countries';
 import styles from '../../styles/Country.module.scss';
 
-export default function Country({ country }) {
+export default function Country({ country }: { country: Country }) {
   return (
     <>
       <Header />
@@ -27,7 +29,11 @@ export default function Country({ country }) {
                 </div>
                 <div className={styles.item}>
                   <h3>Population:</h3>
-                  <span>{` ${country.population}`}</span>
+                  <NumberFormat
+                    value={country.population}
+                    displayType="text"
+                    thousandSeparator
+                  />
                 </div>
                 <div className={styles.item}>
                   <h3>Region:</h3>
@@ -59,8 +65,11 @@ export default function Country({ country }) {
             </article>
             <section className={styles.borderCountries}>
               <h3>Border Countries:</h3>
-              <span>{country.borders[0]}</span>
-              <span>{country.borders[1]}</span>
+              {country.borders.map((border) => (
+                <Link key={border} href={`/countries/${border}`}>
+                  <span>{border}</span>
+                </Link>
+              ))}
             </section>
           </section>
         </article>
@@ -73,7 +82,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const raw = await fetch(`https://restcountries.eu/rest/v2/all`);
   const countries = await raw.json();
 
-  const paths = countries.map((country) => ({
+  const paths = countries.map((country: Country) => ({
     params: { id: country.alpha3Code },
   }));
 

@@ -1,17 +1,18 @@
 import { useState, useEffect, useRef } from 'react';
+import { Countries } from '@/types/countries';
 import styles from './RegionSelect.module.scss';
 
 export const RegionSelect = ({
   countries,
   setCountries,
 }: {
-  countries: any;
-  setCountries: any;
+  countries: Countries;
+  setCountries: React.Dispatch<React.SetStateAction<Countries>>;
 }) => {
   const [region, setRegion] = useState(`default`);
   const originalCountries = useRef(countries);
 
-  const handleRegionChange = (e: any) => {
+  const handleRegionChange = (e: React.BaseSyntheticEvent) => {
     setRegion(e.target.value);
   };
 
@@ -21,17 +22,18 @@ export const RegionSelect = ({
     } else {
       setCountries(
         originalCountries.current.filter(
-          (country: any) => country.region === region,
+          (country) => country.region === region,
         ),
       );
     }
-  }, [region, setCountries]);
+  }, [region]);
 
   return (
     <select
       className={styles.dropdown}
       value={region}
       onChange={handleRegionChange}
+      onBlur={() => setRegion(`default`)}
     >
       <option className={styles.region} value="default" disabled>
         Filter by Region

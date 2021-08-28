@@ -81,14 +81,31 @@
   }
 
   .item,
-  .borderCountries {
+  .border-countries {
     font-size: 0.875rem;
     display: flex;
     align-items: baseline;
 
     h3 {
       font-weight: 600;
-      margin-right: 0.25em;
+      margin-right: 0.5em;
+    }
+  }
+
+  .border-countries {
+    flex-wrap: wrap;
+
+    span {
+      background-color: var(--elements);
+      box-shadow: var(--elements-shadow);
+      border-radius: 0.5em;
+      padding: 0.5em;
+      margin-right: 0.5em;
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }

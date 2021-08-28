@@ -1,7 +1,7 @@
 .grid {
   display: grid;
   gap: 4em;
-  margin: 4em;
+  margin: 0 4em;
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);

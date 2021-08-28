@@ -48,6 +48,7 @@ specifiers:
   prettier: 2.3.2
   react: latest
   react-dom: latest
+  react-number-format: 4.7.3
   sass: 1.37.5
   sass-loader: 10.1.1
   start-server-and-test: 1.13.1
@@ -64,6 +65,7 @@ dependencies:
   next: 11.1.0_485b2e671c52daea3151d0ae96928a54
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-number-format: 4.7.3_react-dom@17.0.2+react@17.0.2
   sass: 1.37.5
 
 devDependencies:
@@ -12749,7 +12751,6 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       react-is: 16.13.1
-    dev: true
 
   /property-information/5.6.0:
     resolution: {integrity: sha512-YUHSPk+A30YPv+0Qf8i9Mbfe/C0hdPXk1s1jPVToV8pk8BQtpw10ct89Eo7OWkutrwqvT0eicAxlOg3dOAu8JA==}
@@ -13062,7 +13063,6 @@ packages:
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
-    dev: true
 
   /react-is/17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
@@ -13070,6 +13070,17 @@ packages:
   /react-lifecycles-compat/3.0.4:
     resolution: {integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==}
     dev: true
+
+  /react-number-format/4.7.3_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-4EvcANjstypQ5anhanmdEioGc49qbnErfS+yqbhatC0vzQ1okplkWNb0DIY7ABu4RhaxzttEz6pypEy8KsqgBQ==}
+    peerDependencies:
+      react: ^0.14 || ^15.0.0-0 || ^16.0.0-0 || ^17.0.0-0
+      react-dom: ^0.14 || ^15.0.0-0 || ^16.0.0-0 || ^17.0.0-0
+    dependencies:
+      prop-types: 15.7.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
 
   /react-popper-tooltip/3.1.1_react-dom@17.0.2+react@17.0.2:
     resolution: {integrity: sha512-EnERAnnKRptQBJyaee5GJScWNUKQPDD2ywvzZyUjst/wj5U64C8/CnSYLNEmP2hG0IJ3ZhtDxE8oDN+KOyavXQ==}

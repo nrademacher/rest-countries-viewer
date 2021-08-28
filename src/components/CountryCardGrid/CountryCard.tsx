@@ -1,14 +1,10 @@
 import Link from 'next/link';
+import NumberFormat from 'react-number-format';
+import { Country } from '../../types/countries';
 import styles from './CountryCard.module.scss';
 
-type CountryCardProps = {
-  id: string;
-  flagUrl: string;
-  name: string;
-  population: string;
-  region: 'Africa' | 'America' | 'Asia' | 'Europe' | 'Oceania';
-  capital: string;
-};
+type CountryCard = Pick<Country, 'name' | 'population' | 'region' | 'capital'>;
+type CountryCardProps = CountryCard & { id: string; flagUrl: string };
 
 export const CountryCard = ({
   id,
@@ -32,7 +28,11 @@ export const CountryCard = ({
         <article className={styles.cardItems}>
           <div className={styles.cardItem}>
             <h3>Population:</h3>
-            <span>{` ${population}`}</span>
+            <NumberFormat
+              value={population}
+              displayType="text"
+              thousandSeparator
+            />
           </div>
           <div className={styles.cardItem}>
             <h3>Region:</h3>
