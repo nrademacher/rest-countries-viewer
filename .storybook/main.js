@@ -1,4 +1,3 @@
-// .storybook/main.js
 const path = require('path');
 
 module.exports = {
@@ -19,6 +18,7 @@ module.exports = {
             importLoaders: 1,
             modules: {
               auto: true,
+              exportLocalsConvention: 'camelCase',
             },
           },
         },

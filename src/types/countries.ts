@@ -6,13 +6,13 @@ export type Country = {
   callingCodes: string[];
   capital: string;
   altSpellings: string[];
-  region: 'Africa' | 'America' | 'Asia' | 'Europe' | 'Oceania';
+  region: 'Africa' | 'Americas' | 'Asia' | 'Europe' | 'Oceania';
   subregion: string;
   population: number;
   latlng: number[];
   demonym: string;
   area: number;
-  gini: number[];
+  gini: number | number[];
   timezones: string[];
   borders: string[];
   nativeName: string;
