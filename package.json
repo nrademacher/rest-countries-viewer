@@ -36,7 +36,7 @@
       "pnpm format",
       "pnpm test:unit"
     ],
-    "*.{css, scss}": [
+    "src/**/*.{css,scss,module.scss}": [
       "stylelint --fix",
       "pnpm format:style"
     ]
