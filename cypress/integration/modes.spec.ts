@@ -15,7 +15,7 @@ export default describe('light/dark mode switching', () => {
     cy.get('input').should('have.css', 'color', 'rgb(255, 255, 255)');
   });
 
-  it("change the switch's text", () => {
+  it("changes the switch's text", () => {
     cy.get('[class*=theme-switch-text]').should('contain.text', 'Light Mode');
   });
 
