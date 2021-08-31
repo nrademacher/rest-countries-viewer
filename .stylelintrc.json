@@ -8,9 +8,9 @@
     "value-no-vendor-prefix": true,
     "at-rule-no-vendor-prefix": true,
     "media-feature-name-no-vendor-prefix": true,
-    "declaration-property-value-whitelist": {
+    "declaration-property-value-allowed-list": {
       "/color$/": [
-        "/^\\$|initial|inherit|transparent|currentColor|darken|lighten|rgba/"
+        "/^\\$|initial|inherit|transparent|currentColor|darken|lighten|rgba/|var/"
       ],
       "fill": [
         "/^\\$|initial|inherit|transparent|currentColor|darken|lighten|rgba/"
