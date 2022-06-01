@@ -50,7 +50,7 @@
     "react": "latest",
     "react-dom": "latest",
     "react-number-format": "4.7.3",
-    "sass": "1.37.5"
+    "sass": "1.52.1"
   },
   "devDependencies": {
     "@babel/core": "7.14.6",
